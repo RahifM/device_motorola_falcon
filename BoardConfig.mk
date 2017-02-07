@@ -29,6 +29,7 @@ BOARD_GLOBAL_CFLAGS += -DCAMERA_VENDOR_L_COMPAT
 
 # Kernel
 TARGET_KERNEL_CONFIG := falcon_defconfig
+TARGET_WANTS_DTIMAGE_BUILT := true
 
 # Disable basic dexpreopt enabled from msm8226-common
 WITH_DEXPREOPT := false
