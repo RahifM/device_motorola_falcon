@@ -36,4 +36,8 @@
          don't support RIL_REQUEST_GET_RADIO_CAPABILITY
          format is UMTS|LTE|... -->
     <string translatable="false" name="config_radio_access_family">GSM | WCDMA | CDMA | EVDO</string>
+
+     <!-- Config determines whether the device should show a navigation bar as default or not -->
+     <bool name="config_defaultToNavigationBar">true</bool>
+
 </resources>
