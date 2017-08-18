@@ -34,10 +34,11 @@
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
+#include <android-base/properties.h>
 #include "vendor_init.h"
 #include "property_service.h"
-#include "log.h"
-#include "util.h"
+
+using android::base::GetProperty;
 
 void property_override(char const prop[], char const value[])
 {
@@ -52,13 +53,13 @@ void property_override(char const prop[], char const value[])
 
 void vendor_load_properties()
 {
-    std::string platform = property_get("ro.board.platform");
+    std::string platform = GetProperty("ro.board.platform", "");
     if (platform != ANDROID_TARGET)
         return;
 
     property_override("ro.product.model", "Moto G");
 
-    std::string radio = property_get("ro.boot.radio");
+    std::string radio = GetProperty("ro.boot.radio", "");
     if (radio == "0x1") {
         if (access("/dev/block/platform/msm_sdcc.1/by-name/metadata", F_OK) != -1) {
             /* xt1032 GPE */
@@ -158,6 +159,4 @@ void vendor_load_properties()
         property_set("persist.radio.multisim.config", "");
     }
 
-    std::string device = property_get("ro.product.device");
-    INFO("Found radio id: %s, setting build properties for %s device\n", radio.c_str(), device.c_str());
 }
