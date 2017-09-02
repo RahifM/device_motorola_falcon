@@ -101,7 +101,7 @@ void vendor_load_properties()
             property_set("ro.com.google.clientidbase.ms", "android-boost-us");
             property_set("ro.com.google.clientidbase.am", "android-boost-us");
             property_set("ro.com.google.clientidbase.yt", "android-boost-us");
-        } else (carrier == "usc") {
+        } else {
             property_override("ro.build.description", "falcon_usc-user 5.1 LPB23.13-33.6 8 release-keys");
             property_override("ro.build.fingerprint", "motorola/falcon_usc/falcon_cdma:5.1/LPB23.13-33.6/8:user/release-keys");
             property_set("ro.mot.build.customerid", "usc");
