@@ -81,7 +81,7 @@ void vendor_load_properties()
             property_set("persist.radio.multisim.config", "");
         }
     } else if (radio == "0x3") {
-        std::string carrier = property_get("ro.boot.carrier");
+        std::string carrier = GetProperty("ro.boot.carrier", "");
         if (carrier == "vzw") {
             property_override("ro.build.description", "falcon_verizon-user 5.1 LPB23.13-33.7 7 release-keys");
             property_override("ro.build.fingerprint", "motorola/falcon_verizon/falcon_cdma:5.1/LPB23.13-33.7/7:user/release-keys");
@@ -101,7 +101,7 @@ void vendor_load_properties()
             property_set("ro.com.google.clientidbase.ms", "android-boost-us");
             property_set("ro.com.google.clientidbase.am", "android-boost-us");
             property_set("ro.com.google.clientidbase.yt", "android-boost-us");
-        } else if (carrier == "usc") {
+        } else (carrier == "usc") {
             property_override("ro.build.description", "falcon_usc-user 5.1 LPB23.13-33.6 8 release-keys");
             property_override("ro.build.fingerprint", "motorola/falcon_usc/falcon_cdma:5.1/LPB23.13-33.6/8:user/release-keys");
             property_set("ro.mot.build.customerid", "usc");
@@ -113,8 +113,6 @@ void vendor_load_properties()
             property_set("ro.com.google.clientidbase", "android-motorola");
             property_set("ro.com.google.clientidbase.gmm", "android-motorola");
             property_set("ro.com.google.clientidbase.yt", "android-motorola");
-        } else {
-            ERROR("Unknown mobile carrier");
         }
         property_override("ro.product.device", "falcon_cdma");
         property_override("ro.build.product", "falcon_cdma");
