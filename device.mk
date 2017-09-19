@@ -39,7 +39,9 @@ PRODUCT_COPY_FILES += \
 
 # Data
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/lib/libqsap_sdk.so:system/lib/libqsap_sdk.so
+    $(LOCAL_PATH)/lib/libqsap_sdk.so:system/lib/libqsap_sdk.so \
+    $(LOCAL_PATH)/lib/libcnefeatureconfig.so:system/lib/libcnefeatureconfig.so \
+    $(LOCAL_PATH)/lib/libstlport.so:system/vendor/lib/libstlport.so
 
 # Inherit from msm8226-common
 $(call inherit-product, device/motorola/msm8226-common/msm8226.mk)
