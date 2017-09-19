@@ -9,4 +9,12 @@ PRODUCT_NAME := aosp_falcon
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_PACKAGES += \
-    Launcher3
+    Launcher3 \
+    Messaging \
+    Terminal \
+    WallpaperPicker
+
+# AOSP properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.setupwizard.rotation_locked=true \
+    ro.storage_manager.enabled=true

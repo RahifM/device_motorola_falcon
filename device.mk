@@ -41,9 +41,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
-# Data
+# These should go inside vendor/moto* :'3
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/lib/libqsap_sdk.so:system/lib/libqsap_sdk.so
+    $(LOCAL_PATH)/lib/libqsap_sdk.so:system/lib/libqsap_sdk.so \
+    $(LOCAL_PATH)/lib/libcnefeatureconfig.so:system/lib/libcnefeatureconfig.so
 
 # Inherit from msm8226-common
 $(call inherit-product, device/motorola/msm8226-common/msm8226.mk)
