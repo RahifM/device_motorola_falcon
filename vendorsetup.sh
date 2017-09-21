@@ -1,2 +1,2 @@
-add_lunch_combo aosp_falcon-eng
-add_lunch_combo aosp_falcon-userdebug
+add_lunch_combo omni_falcon-eng
+add_lunch_combo omni_falcon-userdebug
