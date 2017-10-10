@@ -10,8 +10,8 @@ PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 CITRUS_RELEASE := true
 
-PRODUCT_PROPERTY_OVERRIDES += ro.caf.branch=LA.UM.5.6.r1-04000-89xx.0
+PRODUCT_PROPERTY_OVERRIDES += ro.caf.branch=LA.UM.5.6.r1-05900-89xx.0
 
 # Citrus-CAF Maintainers
 PRODUCT_BUILD_PROP_OVERRIDES += \
-         DEVICE_MAINTAINERS="Rahif M"
+         DEVICE_MAINTAINERS="Rahif ツ"
