@@ -1,3 +1,6 @@
+# Inherit common Android Go configurations
+$(call inherit-product, build/target/product/go_defaults.mk)
+
 # Grab em APNs
 PRODUCT_COPY_FILES += device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 
