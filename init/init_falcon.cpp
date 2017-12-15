@@ -112,8 +112,8 @@ void vendor_load_properties()
             property_set("ro.com.google.clientidbase", "android-motorola");
             property_set("ro.com.google.clientidbase.gmm", "android-motorola");
             property_set("ro.com.google.clientidbase.yt", "android-motorola");
-        } else {
-            LOG(ERROR) << "Unknown mobile carrier";
+  //      } else {
+//            LOG(ERROR) << "Unknown mobile carrier";
         }
         property_override("ro.product.device", "falcon_cdma");
         property_override("ro.build.product", "falcon_cdma");
@@ -157,7 +157,9 @@ void vendor_load_properties()
         property_set("ro.telephony.default_network", "0");
         property_set("persist.radio.multisim.config", "");
     }
+/*
+    //std::string device = GetProperty("ro.product.device", "");
+    //LOG(INFO) << "Found radio id: '" << radio.c_str() << "', setting build properties for '" << device.c_str() << "' device\n";
 
-    std::string device = GetProperty("ro.product.device", "");
-    LOG(INFO) << "Found radio id: '" << radio.c_str() << "', setting build properties for '" << device.c_str() << "' device\n";
+ What the flip is going on here^ and at 116 too ;--; */
 }
