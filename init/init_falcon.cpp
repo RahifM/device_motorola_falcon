@@ -115,7 +115,6 @@ void vendor_load_properties()
             property_set("ro.com.google.clientidbase.gmm", "android-motorola");
             property_set("ro.com.google.clientidbase.yt", "android-motorola");
         } else {
-            ERROR("Unknown mobile carrier");
         }
         property_override("ro.product.device", "falcon_cdma");
         property_override("ro.build.product", "falcon_cdma");
